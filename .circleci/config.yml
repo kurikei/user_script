@@ -1,0 +1,26 @@
+version: 2
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - lint
+
+jobs:
+  lint:
+    docker:
+      - image: circleci/node
+        environment:
+          CIRCLE_TEST_REPORTS: &circle_test_report /tmp/test-results
+    steps:
+      - checkout
+      - type: cache-restore
+        key: v1-node_module-{{ checksum "package.json" }}
+      - run: npm install
+      - type: cache-save
+        key: v1-node_module-{{ checksum "package.json"}}
+        paths:
+          - node_modules
+      - run: mkdir -p $CIRCLE_TEST_REPORTS/jshint && node_modules/jshint/bin/jshint --reporter=node_modules/jshint-junit-reporter/reporter.js *.js > $CIRCLE_TEST_REPORTS/jshint/results.xml
+      - store_test_results:
+          path: *circle_test_report
