@@ -1,13 +1,12 @@
 // ==UserScript==
 // @name         Amazon.com - Amazon.co.jp の同一商品へのリンクを追加
 // @namespace    https://github.com/kurikei/user_script
-// @version      1.0.0
+// @version      1.0.1
 // @description  Amazon.com - Amazon.co.jp の同一商品へのリンクを追加
 // @author       kurikei
 // @require      https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.18.2/babel.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.16.0/polyfill.js
-// @match        https://www.amazon.com/*/dp/*
-// @match        https://www.amazon.com/dp/*
+// @include      /https:\/\/www.amazon.com\/([^\/]+\/)?[dg]p\/(.+)
 // ==/UserScript==
 
 /* jshint ignore:start */
