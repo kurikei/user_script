@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Amazon - Amazon.com の同一商品へのリンクを追加
 // @namespace    https://github.cm/kurikei/user_script
-// @version      1.0.1
+// @version      1.1.0
 // @description  Amazon.com - Amazon.co.jp の同一商品へのリンクを追加
 // @author       kurikei
 // @require      https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.18.2/babel.js
@@ -26,7 +26,9 @@ var inline_src = (<><![CDATA[
         // リンク作成
         const link = document.createElement('a');
         link.textContent = 'Amazon.com';
-        link.href = "https://www.amazon.com/dp/" + asin;
+        const image = document.createElement('img');
+        image.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Amazon.com-Logo.svg/799px-Amazon.com-Logo.svg.png";
+        link.appendChild(image);
 
         // ASIN の <li> の後ろに追加
         list.parentNode.insertBefore(link, list.nextSibling);
