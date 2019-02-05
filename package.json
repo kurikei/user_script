@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "jshint": "2.9.7",
+    "jshint": "2.10.0",
     "jshint-junit-reporter": "0.2.3"
   }
 }
