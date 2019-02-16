@@ -28,6 +28,6 @@ jobs:
           name: Lint with report
           command: |
             mkdir -p $CIRCLE_TEST_REPORTS/jshint
-            node_modules/jshint/bin/jshint --reporter=node_modules/jshint-junit-reporter/reporter.js *.js > $CIRCLE_TEST_REPORTS/jshint/results.xml
+            npm run lint > $CIRCLE_TEST_REPORTS/jshint/results.xml
       - store_test_results:
           path: *circle_test_report
