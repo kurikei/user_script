@@ -1,26 +1,33 @@
-version: 2
+version: 2.1
+
+orbs:
+  node-orb: circleci/node@0.0.5
 
 workflows:
-  version: 2
   build:
     jobs:
       - lint
 
 jobs:
   lint:
-    docker:
-      - image: circleci/node
-        environment:
-          CIRCLE_TEST_REPORTS: &circle_test_report /tmp/test-results
+    environment:
+      CIRCLE_TEST_REPORTS: &circle_test_report /tmp/test-results
+    executor:
+      name: node-orb/node
+      tag: "10-browsers"
     steps:
       - checkout
-      - type: cache-restore
-        key: v1-node_module-{{ checksum "package.json" }}
-      - run: npm install
-      - type: cache-save
-        key: v1-node_module-{{ checksum "package.json"}}
-        paths:
-          - node_modules
-      - run: mkdir -p $CIRCLE_TEST_REPORTS/jshint && node_modules/jshint/bin/jshint --reporter=node_modules/jshint-junit-reporter/reporter.js *.js > $CIRCLE_TEST_REPORTS/jshint/results.xml
+      - node-orb/with-cache:
+          steps:
+            - run:
+                command: npm install
+      - run:
+          name: Add node executables dir to $PATH
+          command: echo 'export PATH=node_modules/.bin/:$PATH' >> $BASH_ENV 
+      - run:
+          name: Lint with report
+          command: |
+            mkdir -p $CIRCLE_TEST_REPORTS/jshint
+            npm run lint > $CIRCLE_TEST_REPORTS/jshint/results.xml
       - store_test_results:
           path: *circle_test_report

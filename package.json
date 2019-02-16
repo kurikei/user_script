@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "lint": "jshint --reporter=node_modules/jshint-junit-reporter/reporter.js *.js"
+  },
   "devDependencies": {
     "jshint": "2.10.1",
     "jshint-junit-reporter": "0.2.3"
