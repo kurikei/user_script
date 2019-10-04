@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         世田谷区の粗大ごみ回収ページのテキストボックスを自動で埋める
 // @namespace    https://github.com/kurikei/user_script
-// @version      0.0.1
+// @version      0.0.2
 // @description  世田谷区の粗大ごみ回収ページのテキストボックスを自動で埋める
 // @author       kurikei
 // @require      https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.18.2/babel.js
@@ -13,9 +13,9 @@
 
 /* jshint ignore:start */
 var inline_src = (<><![CDATA[
-  /* jshint ignore:end */
-  /* jshint esnext: false */
-  /* jshint esversion: 6 */
+/* jshint ignore:end */
+/* jshint esnext: false */
+/* jshint esversion: 6 */
   moment.locale("ja");
 
   fillValue('NAME_L', 'XXX');
@@ -32,8 +32,6 @@ var inline_src = (<><![CDATA[
   function fillValue(id, set_value) {
     document.getElementById(id).value = set_value;
   }
-
-}
 /* jshint ignore:start */
 ]]></>).toString();
 var c = Babel.transform(inline_src, { presets: [ "es2015", "es2016" ] });
