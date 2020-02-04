@@ -28,7 +28,7 @@ var inline_src = (<><![CDATA[
     element.parentNode.insertBefore(mangaReaderLink, element.nextSibling);
 
     let cloudReaderLink = document.createElement('a');
-    cloudReaderLink.href = "https://read.amazon.co.jp/?asin=" + asin
+    cloudReaderLink.href = "https://read.amazon.co.jp/?asin=" + asin;
     cloudReaderLink.textContent = "Cloud Reader";
     element.parentNode.insertBefore(cloudReaderLink, element.nextSibling);
   }
