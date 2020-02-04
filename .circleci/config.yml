@@ -39,6 +39,8 @@ jobs:
       - store_test_results:
           path: *circle_test_report
   increment_version:
+    docker:
+      - image: debian:stretch-slim
     steps:
       - checkout
       - run:
