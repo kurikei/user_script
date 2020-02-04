@@ -28,10 +28,10 @@ var inline_src = (<><![CDATA[
         link.href = "https://www.amazon.co.jp/dp/" + asin;
         const image = document.createElement('img');
         image.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Amazon.co.jp_logo.svg/300px-Amazon.co.jp_logo.svg.png";
+        image.style = "height:2em";
         link.appendChild(image);
 
-        // ASIN の <li> の後ろに追加
-        list.parentNode.insertBefore(link, list.nextSibling);
+        list.append(link, list.nextSibling);
       }
     }
 
