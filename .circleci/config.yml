@@ -46,9 +46,13 @@ jobs:
       - run:
           name: 'increment version'
           command: |
-            hash_diff=$(echo "$CIRCLE_COMPARE_URL" | awk -F"/" '{print $NF}') # e.g) b49753e8fa55...0c0f2efd332a
-            if [[ -n "$hash_diff" ]]; then
-              for i in $(git diff --name-only $hash_diff *.user.js); do
+            # mergeコミットだった場合
+            if [[ $(git log -1 --format="%H") == $(git log -1 --merges --format="%H") ]];then
+
+              CURRENT_REVISION=$(git rev-parse --short HEAD)
+              BASE_REVISION=$(git show-branch --merge-base "${TARGET_REV}^1" "${TARGET_REV}^2")
+
+              for i in $(git diff --name-only $BASE_REVISION...$CURRENT_REVISION *.user.js); do
                 ./bin/replace_version.sh $i;
               done
               git add .
