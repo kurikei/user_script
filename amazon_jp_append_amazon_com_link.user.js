@@ -31,7 +31,6 @@ var inline_src = (<><![CDATA[
         image.style = "height:2em";
 
         link.appendChild(image);
-
         list.append(link, list.nextSibling);
       }
     }
