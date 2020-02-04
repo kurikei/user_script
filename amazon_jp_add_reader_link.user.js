@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Amazon - 漫画リーダー/クラウドリーダーへのリンクを追加する
 // @namespace    https://bitbucket.org/kurikei/user_script
-// @version      0.0.1
+// @version      0.1.0
 // @description  ブラウザ上のKindleのリーダーのリンクを付与する
 // @author       kurikei
 // @require      https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.18.2/babel.js

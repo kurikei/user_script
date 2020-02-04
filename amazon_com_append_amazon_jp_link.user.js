@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Amazon.com - Amazon.co.jp の同一商品へのリンクを追加
 // @namespace    https://github.com/kurikei/user_script
-// @version      1.2.0
+// @version      1.3.0
 // @description  Amazon.com - Amazon.co.jp の同一商品へのリンクを追加
 // @author       kurikei
 // @require      https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.18.2/babel.js
