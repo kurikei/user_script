@@ -4,6 +4,7 @@
   },
   "devDependencies": {
     "danger": "9.2.10",
+    "danger-plugin-eslint": "0.1.0",
     "eslint": "6.8.0",
     "eslint-config-prettier": "6.10.0",
     "eslint-plugin-prettier": "3.1.2",
