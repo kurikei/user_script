@@ -6,6 +6,10 @@ orbs:
 workflows:
   build:
     jobs:
+      - lint_on_pr:
+          filters:
+            branches:
+              ignore: master
       - lint:
           filters:
             branches:
@@ -16,6 +20,25 @@ workflows:
               only: master
 
 jobs:
+  lint_on_pr:
+    executor:
+      name: node-orb/node
+      tag: "10-browsers"
+    steps:
+      - checkout
+      - run:
+          name: install review dog
+          command: |
+            curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh| sh -s
+      - node-orb/with-cache:
+          steps:
+            - run:
+                command: npm install
+      - run:
+          name: reviewdog
+          command: |
+            npx eslint -f checkstyle . | reviewdog -f=checkstyle -name="eslint" -reporter=github-pr-check
+
   lint:
     environment:
       CIRCLE_TEST_REPORTS: &circle_test_report /tmp/test-results
