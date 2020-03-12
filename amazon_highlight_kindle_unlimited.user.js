@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Amazon.co.jp - Kindle Unlimited 本をハイライトする
 // @namespace    https://github.com/kurikei/user_script<
-// @version      1.0.0
+// @version      1.1.0
 // @description  KindleUnlimited本をハイライト
 // @author       kurikei
 // @match        https://www.amazon.co.jp/*

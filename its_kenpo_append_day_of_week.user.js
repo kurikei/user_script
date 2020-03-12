@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ITS施設予約システム - 日付に曜日を付与する
 // @namespace    https://github.com/kurikei
-// @version      1.0.0
+// @version      1.1.0
 // @description  ITS施設予約システムの日付に曜日を付与する
 // @author       kurikei
 // @require      https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.js

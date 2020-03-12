@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         世田谷区の粗大ごみ回収ページのテキストボックスを自動で埋める
 // @namespace    https://github.com/kurikei/user_script
-// @version      0.0.2
+// @version      0.1.0
 // @description  世田谷区の粗大ごみ回収ページのテキストボックスを自動で埋める
 // @author       kurikei
 // @require      https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.js

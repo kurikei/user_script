@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         世田谷区立図書館の予約システムのオプションを自動で記入する
 // @namespace    https://github.com/kurikei
-// @version      1.0.0
+// @version      1.1.0
 // @description  世田谷区立図書館の予約システムのオプションを自動で記入する
 // @author       kurikei
 // @match       https://libweb.city.setagaya.tokyo.jp/*/rbcnf

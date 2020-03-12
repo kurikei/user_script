@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Amazon - Amazon.com の同一商品へのリンクを追加
 // @namespace    https://github.cm/kurikei/user_script
-// @version      1.3.0
+// @version      1.4.0
 // @description  Amazon.com - Amazon.co.jp の同一商品へのリンクを追加
 // @author       kurikei
 // @include      /https:\/\/www.amazon.co.jp\/([^\/]+\/)?[dg]p\/(.+)

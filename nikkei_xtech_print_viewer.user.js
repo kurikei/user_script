@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         日経xtechを印刷表示にする
 // @namespace    http://github.com/kurikei
-// @version      1.2.0
+// @version      1.3.0
 // @author       kurikei
 // @match       https://xtech.nikkei.com/atcl/nxt/column/*
 // ==/UserScript==

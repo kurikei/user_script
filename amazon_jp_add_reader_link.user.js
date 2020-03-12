@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Amazon - 漫画リーダー/クラウドリーダーへのリンクを追加する
 // @namespace    https://bitbucket.org/kurikei/user_script
-// @version      0.1.0
+// @version      0.2.0
 // @description  ブラウザ上のKindleのリーダーのリンクを付与する
 // @author       kurikei
 // @match        https://www.amazon.co.jp/*/dp/*

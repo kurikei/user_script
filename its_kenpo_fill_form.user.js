@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ITS施設予約システム - フォームを自動入力する
 // @namespace    https://github.com/kurikei
-// @version      1.0.0
+// @version      1.1.0
 // @description  ITS施設予約システムのフォームを自動入力する
 // @author       kurikei
 // @match        https://as.its-kenpo.or.jp/apply/new?*
