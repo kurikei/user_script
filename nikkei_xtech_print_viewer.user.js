@@ -19,7 +19,7 @@ var inline_src = (<><![CDATA[
   if (url.searchParams.has("ST")) {
     // do nothing
   } else {
-    url.searchParams.set('ST', 'print')
+    url.searchParams.set('ST', 'print');
     location.href = url.href;
   }
 
