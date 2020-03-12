@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         日経xtechを印刷表示にする
 // @namespace    http://github.com/kurikei
-// @version      1.1.0
+// @version      1.2.0
 // @author       kurikei
 // @require      https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.18.2/babel.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.16.0/polyfill.js
