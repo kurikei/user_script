@@ -35,7 +35,7 @@ jobs:
           name: Lint with report
           command: |
             mkdir -p $CIRCLE_TEST_REPORTS/jshint
-            npm run lint > $CIRCLE_TEST_REPORTS/jshint/results.xml
+            npm run lint --silent > $CIRCLE_TEST_REPORTS/jshint/results.xml
       - store_test_results:
           path: *circle_test_report
   increment_version:
