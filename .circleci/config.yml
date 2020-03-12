@@ -32,6 +32,10 @@ jobs:
           name: Add node executables dir to $PATH
           command: echo 'export PATH=node_modules/.bin/:$PATH' >> $BASH_ENV 
       - run:
+          name: danger
+          command: |
+            npx danger ci
+      - run:
           name: Lint with report
           command: |
             mkdir -p $CIRCLE_TEST_REPORTS/lint
