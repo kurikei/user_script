@@ -10,6 +10,7 @@
 // @match        https://as.its-kenpo.or.jp/apply/empty_new?*
 // ==/UserScript==
 
+/* eslint no-undef: 0 */
 moment.locale('ja');
 
 const options = document

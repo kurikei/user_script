@@ -9,6 +9,7 @@
 // @match       https://www.sodai-city.jp/setagaya/www/cgi-bin/kihon.cgi
 // ==/UserScript==
 
+/* eslint no-undef: 0 */
 moment.locale('ja');
 
 fillValue('NAME_L', 'XXX');
